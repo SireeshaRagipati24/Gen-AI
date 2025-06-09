@@ -1,6 +1,0 @@
-flask
-google-generativeai
-pillow
-python-dotenv
-instagrapi
-requests
