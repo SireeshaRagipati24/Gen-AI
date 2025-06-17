@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #262626;
+}
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: #262626;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.prompt-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.generated-image {
+    border-radius: 16px;
+    object-fit: contain;
+    width: 80%;
+    max-width: 500px;
+    max-height: 700px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}

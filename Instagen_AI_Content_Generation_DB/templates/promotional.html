@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="prompt-box mb-4">
+                <h2 class="text-center mb-4"><i class="fas fa-bullhorn me-2"></i>Promotional Templates</h2>
+                <p class="text-center mb-4">Choose a template to generate professional marketing content</p>
+                
+                <div class="row">
+                    {% for template in templates %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-{{ 'tag' if 'Discount' in template.name else 'box-open' if 'Product' in template.name else 'calendar-alt' if 'Event' in template.name else 'snowflake' if 'Seasonal' in template.name else 'clock' if 'Limited' in template.name else 'hashtag' }}"></i>
+                                </div>
+                                <h5 class="card-title">{{ template.name }}</h5>
+                                <form method="POST" action="{{ url_for('generate') }}">
+                                    <input type="hidden" name="prompt" value="{{ template.prompt }}">
+                                    <button type="submit" class="btn btn-primary mt-2">
+                                        <i class="fas fa-magic me-2"></i>Use Template
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('generate') }}" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Regular Generator
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

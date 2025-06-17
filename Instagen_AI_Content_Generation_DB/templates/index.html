@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="hero-section text-center">
+        <h1 class="display-4 fw-bold mb-4">Create Stunning <span class="text-gradient">Instagram Content</span> with AI</h1>
+        <p class="lead mb-5">Generate beautiful images and captions with just a description.</p>
+        
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('signup') }}" class="btn btn-primary btn-lg px-4">
+                <i class="fas fa-user-plus me-2"></i>Get Started
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
