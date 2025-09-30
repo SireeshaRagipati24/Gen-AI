@@ -1,0 +1,15 @@
+flask
+google-generativeai
+pillow
+python-dotenv
+instagrapi
+requests
+flask-mysqldb
+PyMySQL==1.0.2
+Werkzeug==2.2.3
+google-genai
+psycopg2-binary
+flask-cors
+razorpay
+
+
